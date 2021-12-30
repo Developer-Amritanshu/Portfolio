@@ -1,0 +1,674 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Amritanshu</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="468423f0-7574-481d-bf76-09f88277acf3" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Amritanshu%202a3b86866efd4e009a731926389e205c/IMG_20211101_094700_244.jpg"/></div><h1 class="page-title">Amritanshu</h1></header><div class="page-body"><p id="8185d50b-756e-4b47-bf69-b7e3889a2948" class=""><mark class="highlight-blue"><a href="https://docs.google.com/document/d/1z8mSQSgNeJ1epYEnh5-upUfyNGBl-dCNGwupGUDAOBg/edit?usp=sharing">Resume</a></mark></p><p id="d0722515-1ad1-48e6-8a16-a1ee86827ac7" class="">
+</p><h3 id="3b366246-9f6c-4aaa-a2ec-9e1bf6be5fbb" class="">About Me:</h3><p id="e8a5b6d7-ba29-49a0-b509-a1c240ca3d9e" class="">I am pursing Bachelors of Computer Application from DIT University Dehradun and currently I am in final year.</p><p id="164b0953-b5f7-42f6-a41d-6fd73f9b486f" class="">
+</p><p id="45f07cd9-959e-4003-b5bd-dff608cbd5e7" class="">My hometown is not Dehradun I am here for further study, I am from Pauri Garhwal, Uttarakhand.</p><p id="b03e0bca-fb66-43bd-8d81-b74a4711b660" class="">
+</p><h3 id="ac2b20b9-eb0c-4748-8010-59962342daae" class="">Journey to Design:</h3><p id="4723ed90-caba-476a-81ad-74e08809534a" class="">When I was in my school, I always see problem in design and want to fix somehow, but at that age I don&#x27;t know about this field and we don&#x27;t have JIO, Data rates were high 🤢 From my childhood I was curious to learn new things, when I was in my 10th standard I somehow learn about Photoshop and also earn some money 🤑 , then later because of board exams I have to leave design at that time 🥲.</p><p id="d57daac2-b2a1-4809-912d-6d1e74f4e0df" class="">
+</p><p id="b271a0f5-8424-4043-bdf5-6e130848e247" class="">I am always curious to learn new things every time, From my childhood till now I have learned so many things just because there is some &quot;chull&quot; inside me, I get to know about coding, development, photography, stock market, crypto, NFT&#x27;s, etc.</p><p id="2e3c414e-84f8-4d74-85a6-56349ca8397d" class="">
+</p><p id="6ccc23e5-8efa-436f-8d7b-77dbfc48b456" class="">Currently I am curious about NFT&#x27;s, No Code and want to get my skill back (photoshop and illustrator)</p><p id="59e6ad5b-3033-4877-92a4-ed8f90e4497f" class="">
+</p><p id="a2b332ea-e7ff-4489-bc82-9cee8a88ecf0" class="">Same story long way</p><figure id="80009cb1-00bd-4f1f-9583-da783a7a4ece" class="link-to-page"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/A8U%2080009cb100bd4f1f9583da783a7a4ece.html"><span class="icon">⛹🏻</span>A8U</a></figure><p id="967be196-dfb0-4dcd-9bf0-efce0915d9e0" class="">
+</p><hr id="d8979394-9eab-42bf-a43e-fdd55959ea93"/><p id="c266bf9c-f483-4a11-b5b3-cc4b5b0d9e67" class="">
+</p><h3 id="af8d9bd6-8afd-4d24-8a1f-ed194bedbf17" class="">Projects</h3><div id="f5aeb880-ec9c-466c-a0c6-f3c86193a9ca" class="column-list"><div id="40ee9622-df2b-40d6-a389-39c22f42a821" style="width:50%" class="column"><figure id="612f4f07-703c-40d6-a28b-db4b89312cdc" class="link-to-page"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/Movie%20App%20612f4f07703c40d6a28bdb4b89312cdc.html"><span class="icon">💻</span>Movie App</a></figure></div><div id="9d946fec-fbf2-4337-bb8c-822a80528612" style="width:50%" class="column"><figure id="f2caf9cf-19ed-44f4-9d72-2430dd203d0a" class="link-to-page"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/Kode%20Case%20Study%20f2caf9cf19ed44f49d722430dd203d0a.html"><span class="icon">💻</span>Kode Case Study</a></figure></div></div><figure id="573db9ee-b548-43fc-9e56-8ceb794872d9" class="link-to-page"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/Cowin%20-%20Conversational%20UX%20573db9eeb54843fc9e568ceb794872d9.html"><span class="icon">💻</span>Cowin - Conversational UX</a></figure><p id="83fd56e4-c6f9-4801-a399-923e2d59c506" class="">
+</p><h3 id="95df6aa3-4d33-408d-a59c-1e9173655ac5" class="">UI Design - Intermediate</h3><div id="f43c376b-222d-47ba-ac5e-ce9f9b0c164b" class="column-list"><div id="a7360d9f-9123-4e9d-9ff9-87057ae4afa5" style="width:50%" class="column"><figure id="2a3b8686-6efd-4e00-9a73-1926389e205c" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/5fc92bd1f98a917ff1eff17995be2f2e.png"><img style="width:1600px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/5fc92bd1f98a917ff1eff17995be2f2e.png"/></a></figure><figure id="13d7a458-33c0-4859-971f-916ea8537c1a" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/85bb211ce34da8437c2f79af27ec27ea.png"><img style="width:1600px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/85bb211ce34da8437c2f79af27ec27ea.png"/></a></figure></div><div id="d8af89ff-0a39-444c-9992-8661cac992f9" style="width:50%" class="column"><figure id="93f7011f-2d8b-412f-8425-9fba3d2e1da1" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/f9b79747b38c56ef2ab598ef99eb964e.png"><img style="width:1600px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/f9b79747b38c56ef2ab598ef99eb964e.png"/></a></figure><figure id="5da15c94-32e1-49bf-9e02-6b906143dbd9" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/fbc9c23ccadeaa411f381087eabfea83.png"><img style="width:1600px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/fbc9c23ccadeaa411f381087eabfea83.png"/></a></figure></div></div><p id="730b6ccb-3150-4a51-af8a-f7e56a2b1130" class="">
+</p><h3 id="5b449d49-1c42-470f-8d39-1ea1e36089b2" class="">Motion Design - Intermediate</h3><div id="ec1b945f-326d-4a19-9040-3aa1873140f3" class="column-list"><div id="7ca7dbcd-9fb6-4652-af7d-450c562a4d19" style="width:50%" class="column"><figure id="f99115d1-7c1b-4b2c-b83d-435707a0138d" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/image_processing20211210-10268-1ur5vkr.gif"><img style="width:800px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/image_processing20211210-10268-1ur5vkr.gif"/></a></figure></div><div id="694b9c6f-3668-4cbc-a0a7-38be7421dbae" style="width:50%" class="column"><figure id="24ef141c-d383-4ac9-9015-65a419b892ec" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/image_processing20211215-16884-vyrrpl.gif"><img style="width:800px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/image_processing20211215-16884-vyrrpl.gif"/></a></figure></div></div><div id="0cee6343-5f74-4256-b88d-09ef8637c1bb" class="column-list"><div id="80c2c256-a702-41b2-8e8a-be81f5d385d8" style="width:50%" class="column"><figure id="52abf472-1c38-4e64-9320-2f6a7794f903" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/image_processing20211213-28958-x3bha3.gif"><img style="width:800px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/image_processing20211213-28958-x3bha3.gif"/></a></figure></div><div id="d4176bf5-1a1f-4615-822a-f5cf0a2fc0ce" style="width:50%" class="column"><figure id="03b64068-5a6d-495e-ba2a-73a8d343f067" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/Untitled_design.gif"><img style="width:800px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/Untitled_design.gif"/></a></figure></div></div><p id="66a5e337-5635-4b1a-a84c-f54c3de9ae98" class="">
+</p><h3 id="8c933018-9905-47cb-8274-80673f1c836d" class="">3D- Basics</h3><div id="5dbf435f-48b9-48bd-97ff-13b524c21d8c" class="column-list"><div id="f9096e6d-da95-4369-9ff6-ddf37071b63e" style="width:50%" class="column"><figure id="15965674-538e-49dc-a706-b0efb4bcff44"><div class="source"><a href="https://my.spline.design/ddd-27ad777c366878599894c7bacccabc6c/">https://my.spline.design/ddd-27ad777c366878599894c7bacccabc6c/</a></div></figure></div><div id="4eaa65be-def3-4afe-b3f6-f6cd96ec7c91" style="width:50%" class="column"><figure id="82837005-f7f7-4a03-b0a7-6b6550864341"><div class="source"><a href="https://my.spline.design/3dconfetti-f308ac85ce563938178fe2fdbe852784/">https://my.spline.design/3dconfetti-f308ac85ce563938178fe2fdbe852784/</a></div></figure></div></div><h3 id="88e521d5-8aba-41cb-801b-577e3b9725fe" class="">ILLUSTRATION - Basics</h3><div id="8bc4a121-79b4-4799-95c2-dd0ff8078ab4" class="column-list"><div id="58e17962-672d-4c2c-af7e-eefa1f0449f8" style="width:50%" class="column"><figure id="57c9fba4-2ef5-433e-9e11-0e6ff1d84e9f" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/Hot_dog-100.jpg"><img style="width:600px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/Hot_dog-100.jpg"/></a></figure></div><div id="a067879b-526a-4614-bbd3-c04809e4fcd1" style="width:50%" class="column"><figure id="ee572e28-f148-4621-9c03-2e099759d22b" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/Cheese_burger-100.jpg"><img style="width:600px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/Cheese_burger-100.jpg"/></a></figure></div></div><p id="c2741594-8d45-4ce5-a571-ee633837dba5" class="">
+</p><h3 id="9d82c684-cbf4-4d12-a5eb-824230412c8c" class="">NFTs </h3><div id="5c46c144-3b1a-4267-b7b0-3246e434fe47" class="column-list"><div id="a68ea58c-ee73-46ed-aec1-5499cd10f97f" style="width:50%" class="column"><figure id="95d10af9-8783-4603-88b8-8438fc37a781" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/QmTFoBCLRmFAMiMGwXGn9iDHhBK11e8PxcSk11iZyyt91o.png"><img style="width:384px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/QmTFoBCLRmFAMiMGwXGn9iDHhBK11e8PxcSk11iZyyt91o.png"/></a></figure></div><div id="c08e04db-0cbe-49c9-8a56-b9d4021ad488" style="width:50%" class="column"><figure id="2cc21498-fd72-429d-836f-2758e643e2f5" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/QmTgfVNwyidFJDi8qhVTb75qwfqsLWPB6eZa1rXREakk4H.png"><img style="width:4320px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/QmTgfVNwyidFJDi8qhVTb75qwfqsLWPB6eZa1rXREakk4H.png"/></a></figure></div></div><div id="afff9bd3-c5e9-4fc7-986e-439e9d073e4f" class="column-list"><div id="e0150754-1c21-4127-ae34-458914c4b772" style="width:50%" class="column"><figure id="cb07a647-5d8c-4a71-a72b-62cb07513fe9" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/QmNQCcKV1dETDauL5tV4MuB9UfELjjASiP7ZWBjmYmKtJb.png"><img style="width:2362px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/QmNQCcKV1dETDauL5tV4MuB9UfELjjASiP7ZWBjmYmKtJb.png"/></a></figure></div><div id="740518c9-697b-4172-86bb-f0e06a93ce5e" style="width:50%" class="column"><figure id="c2dcea9b-01d1-4d21-917a-d1504db8cabe" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/QmR8NZg7Y3ahpaCCHGzQfB3bncRLpJFxTzFyZh3r93oUQm.png"><img style="width:2362px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/QmR8NZg7Y3ahpaCCHGzQfB3bncRLpJFxTzFyZh3r93oUQm.png"/></a></figure></div></div><p id="a5b8f2cb-52ff-4f9a-94f5-7d8e026377f9" class="">
+</p><p id="f32d2ae5-e2c7-4fe9-8da4-dc681333d25d" class="">
+</p><h3 id="1a8b83e3-ec5c-43da-82ef-ce53e50920d6" class="">Photography</h3><div id="b298f9af-d105-4104-9ec6-943b6fd48c06" class="column-list"><div id="e107bce9-cb4a-46a7-b79e-f39a26d11203" style="width:50%" class="column"><figure id="ab3b5166-1d4b-4508-a0d5-146e7069641a" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/IMG_20210921_125358.jpg"><img style="width:3000px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/IMG_20210921_125358.jpg"/></a></figure></div><div id="7bc99965-2633-4506-94a1-90b96eb069a6" style="width:50%" class="column"><figure id="7b3ceb6a-25f6-4949-8fbe-ae6404678123" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/IMG_20211004_161247.jpg"><img style="width:3000px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/IMG_20211004_161247.jpg"/></a></figure></div></div><div id="323f97c0-78a8-4d2c-8941-8dee45611231" class="column-list"><div id="1051bed1-1442-4b71-996d-a26ae7a379de" style="width:50%" class="column"><figure id="570557e8-0895-4cdc-8c2e-44672969f270" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/IMG_20211020_160556.jpg"><img style="width:4000px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/IMG_20211020_160556.jpg"/></a></figure><figure id="d3b87356-9ed6-4d4a-aeba-2caa92a86c56" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/IMG_20210924_154903.jpg"><img style="width:4000px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/IMG_20210924_154903.jpg"/></a></figure></div><div id="8246d17d-2852-40b5-b6bc-067f02d9a431" style="width:50%" class="column"><figure id="b431d9b9-1f82-4280-b072-ef8c2bff70a5" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/IMG_20210924_152609.jpg"><img style="width:4000px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/IMG_20210924_152609.jpg"/></a></figure><figure id="cd7ecdc6-b963-4c2a-aa58-c099ad1755e9" class="image"><a href="Amritanshu%202a3b86866efd4e009a731926389e205c/IMG_20210901_142236.jpg"><img style="width:4000px" src="Amritanshu%202a3b86866efd4e009a731926389e205c/IMG_20210901_142236.jpg"/></a></figure></div></div><p id="4702822a-778f-4b94-afd5-5527cca08942" class="">
+</p><p id="a87a4c40-748f-4387-8ba5-c57d38b9945b" class="">
+</p><p id="4f2c11b3-8cc5-44ab-b47b-a578ea8c0f53" class="">
+</p><h3 id="2e7a7909-ed32-4433-999d-7deee5b453ee" class="">Contact</h3><div id="101838f6-1dcc-4007-a320-1b169bd0476c" class="column-list"><div id="5041699b-fb0c-4252-99c4-3a302dd5f421" style="width:33.333333333333336%" class="column"><p id="2d7f94f8-7239-46be-b63e-4da44145f349" class="block-color-blue"><a href="https://twitter.com/amritanshu_nft">Twitter</a></p></div><div id="f4455642-3c97-4e43-8729-0172d25f1a70" style="width:33.333333333333336%" class="column"><p id="1eadb921-08be-41d4-b38e-0a62ccd6cc63" class="block-color-blue"><a href="https://www.linkedin.com/in/amritanshu-rawat-3010a819b/">LinkedIN</a></p></div><div id="0f90c1c4-6ad0-49e0-b6b2-09f0189d078f" style="width:33.33333333333333%" class="column"><p id="958e3ff5-203d-4b39-9c5e-3bb1111eb899" class="block-color-blue"><a href="https://www.instagram.com/amritanshu_nft/">Instagram</a></p></div></div><p id="d6a2391e-3526-4552-a705-93c424c1ef94" class="">
+</p></div></article></body></html>
